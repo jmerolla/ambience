@@ -3,21 +3,57 @@
     font-family:Verdana, Geneva, sans-serif;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     
     margin:0;
    
-     background: radial-gradient(circle, #b43a3a, #b06700, #334e0d);  
-      /*   linear-gradient(#b43a3a, transparent),
+    /*   background: radial-gradient(circle, #b43a3a, #b06700, #334e0d);  
+       linear-gradient(#b43a3a, transparent),
         linear-gradient(to top left, #334e0d, transparent),
         linear-gradient(to top right, #b06700, transparent); */
     background-blend-mode: screen; 
     background-repeat: no-repeat;
     background-attachment: fixed;
+    max-width:100%;
+    max-height: 100%;
 
     
 }
 
+#grad {
+    height:500%;
+    background: linear-gradient(0deg, #7400bb, #6930c3, #5e60ce, #5390d9, #4ea8de, #48bfe3, #56cfe1, #64dfdf, #4acfbc, #00a475);
+    background-size: 2000% 2000%;
+
+    -webkit-animation: BGAnimation 10s ease infinite; 
+    -moz-animation: BGAnimation 41s ease infinite;
+    animation: BGAnimation 41s ease infinite;
+}
+
+@-webkit-keyframes BGAnimation {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+@-moz-keyframes BGAnimation {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+@keyframes BGAnimation {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+
+#mainContent{
+    display:flex;
+    flex-direction:vertical;
+}
 
 header {
     color:white;
@@ -26,9 +62,15 @@ header {
    
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 1em;
-    padding:.5em;
-    margin:1em;
+    padding:0;
+    margin:0;
 }
+
+
+.logoDisplay img{
+    width:400px;
+    height:300px;
+}  
 footer{
     margin-bottom:0;
     margin-right:0;
