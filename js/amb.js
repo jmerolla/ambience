@@ -6,6 +6,7 @@
  // Create the audio element for the player 
 let curr_track = document.createElement('audio'); 
 
+//TO-DO!!!!!!! Update file paths!!!!!!!!!!!!!!
 let logoList = [
   {
     name: "RainLogo",
