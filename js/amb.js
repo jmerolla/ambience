@@ -6,7 +6,27 @@
  // Create the audio element for the player 
 let curr_track = document.createElement('audio'); 
 
- let trackList = [ 
+let logoList = [
+  {
+    name: "RainLogo",
+    logoTag: '<img src="/images/Logo/RainLogo.png" alt="Ambience">',
+  },
+  {
+    name: "FireLogo",
+    logoTag: '<img src="/images/Logo/FireLogo.png" alt="Ambience">',
+  },
+  {
+    name: "WaterLogo",
+    logoTag: '<img src="/images/Logo/WaterLogo.png" alt="Ambience">',
+  },
+  {
+    name: "SunsetLogo",
+    logoTag: '<img src="/images/Logo/SunsetLogo.png" alt="Ambience">',
+  },
+
+]
+
+let trackList = [ 
     { 
       name: "Rain", 
       imgTag: '<img src="images/rainonwindow2-Alisonabra.jpg" alt="rain on a window">',
