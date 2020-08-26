@@ -28,16 +28,24 @@ body {
     height:500%;
     background: linear-gradient(0deg, #7400bb, #6930c3, #5e60ce, #5390d9, #4ea8de, #48bfe3, #56cfe1, #64dfdf, #4acfbc, #00a475);
     background-size: 2000% 2000%;
-
-  
 }
 
 .rainGrad {
     height:500%;
-    background: linear-gradient(0deg, #797D62, #9B9B7A, #D9AE94, #F1DCA7, #FFCB69, #D08C60, #997B66, #585123, #723D46, #472D30);
+    background: linear-gradient(0deg, #83781B, #95B46A, #709255, #3E5622, #172815, #1C1519, #1B0511, #260701, #38160D, #653A2A);
     background-size: 2000% 2000%;
+}
 
-  
+.fireGrad {
+    height:500%;
+    background: linear-gradient(0deg, #E2711D, #FFB627, #D9AE94, #F1DCA7, #FFCB69, #D08C60, #997B66, #723D46, #472D30, #220901);
+    background-size: 2000% 2000%;
+}
+
+.sunriseGrad {
+    height:500%;
+    background: linear-gradient(0deg, #3590F3, #A3BAFF, #BAA3FF, #FFB8FE, #FFA3DC, #FFA3AE, #E56B6F, #FFA9A3, #FFBB9E, #FFCC99, #FF9A67);
+    background-size: 2000% 2000%; 
 }
 
 .bgAnimation{

@@ -137,14 +137,15 @@ function changeTheme(themeID){
   document.getElementById("bgColor").removeAttribute('class');
   if(themeID == "fireButton"){
     logoId =1;
-    
+    document.getElementById("bgColor").classList.add("fireGrad");
   }else if (themeID =="underwaterButton"){
     logoId=2;
+    document.getElementById("bgColor").classList.add("waterGrad");
   }else if (themeID =="sunriseButton"){
     logoId=3; 
+    document.getElementById("bgColor").classList.add("sunriseGrad");
   }else{
     logoId=0;
-   
     document.getElementById("bgColor").classList.add("rainGrad");
 
   }
