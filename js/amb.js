@@ -11,18 +11,22 @@ let logoList = [
   {
     name: "RainLogo",
     logoTag: '<img src="images/Logo/RainLogo.png" alt="Ambience">',
+    bgStyle: 'linear-gradient(0deg, #797D62, #9B9B7A, #D9AE94, #F1DCA7, #FFCB69, #D08C60, #997B66, #585123, #723D46, #472D30)',
   },
   {
     name: "FireLogo", 
     logoTag: '<img src="images/Logo/FireLogo.png" alt="Ambience">',
+    bgStyle: 'linear-gradient(0deg, #7400bb, #6930c3, #5e60ce, #5390d9, #4ea8de, #48bfe3, #56cfe1, #64dfdf, #4acfbc, #00a475)',
   },
   {
     name: "WaterLogo",
     logoTag: '<img src="images/Logo/WaterLogo.png" alt="Ambience">',
+    bgStyle: 'linear-gradient(0deg, #7400bb, #6930c3, #5e60ce, #5390d9, #4ea8de, #48bfe3, #56cfe1, #64dfdf, #4acfbc, #00a475)',
   },
   {
     name: "SunsetLogo",
     logoTag: '<img src="images/Logo/SunsetLogo.png" alt="Ambience">',
+    bgStyle: 'linear-gradient(0deg, #7400bb, #6930c3, #5e60ce, #5390d9, #4ea8de, #48bfe3, #56cfe1, #64dfdf, #4acfbc, #00a475)',
   },
 
 ]
@@ -142,7 +146,7 @@ function changeTheme(themeID){
   }
   document.getElementById("logo").innerHTML = logoList[logoId].logoTag;
   document.getElementById("imgDisplay").innerHTML = trackList[logoId].imgTag; 
-  
+  document.getElementById('grad').style.background = logoList[logoId].bgStyle;
   pauseTrack();
   curr_track.src = trackList[logoId].path;
   playTrack();
