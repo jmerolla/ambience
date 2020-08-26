@@ -10,19 +10,19 @@ let curr_track = document.createElement('audio');
 let logoList = [
   {
     name: "RainLogo",
-    logoTag: '<img src="/images/Logo/RainLogo.png" alt="Ambience">',
+    logoTag: '<img src="images/Logo/RainLogo.png" alt="Ambience">',
   },
   {
-    name: "FireLogo",
-    logoTag: '<img src="/images/Logo/FireLogo.png" alt="Ambience">',
+    name: "FireLogo", 
+    logoTag: '<img src="images/Logo/FireLogo.png" alt="Ambience">',
   },
   {
     name: "WaterLogo",
-    logoTag: '<img src="/images/Logo/WaterLogo.png" alt="Ambience">',
+    logoTag: '<img src="images/Logo/WaterLogo.png" alt="Ambience">',
   },
   {
     name: "SunsetLogo",
-    logoTag: '<img src="/images/Logo/SunsetLogo.png" alt="Ambience">',
+    logoTag: '<img src="images/Logo/SunsetLogo.png" alt="Ambience">',
   },
 
 ]
@@ -36,7 +36,7 @@ let trackList = [
     { 
       name: "Fire", 
       imgTag: '<img src="images/campfire-afternoon-sunlight.jpg" alt="campfire">', 
-      path: "Enthusiast.mp3",
+      path: "sounds/audio_hero_FireMediumRoarHiss_PE052201_358.mp3",
     }, 
     { 
       name: "Water", 
@@ -75,7 +75,7 @@ function loadTrack(track_index) {
     
     // Apply a random background color 
     //random_bg_color(); 
-  } 
+} 
 
   // Functiom to reset all values to their default 
 function resetValues() { 
@@ -83,46 +83,65 @@ function resetValues() {
     //total_duration.textContent = "00:00"; 
     var slider= document.getElementById("playTimeSlider");
     slider.value = 0; 
-  } 
+} 
     
-  function changeSlide() {
+function changeSlide() {
     var slider= document.getElementById("playTimeSlider");
     slider.style.background = 'linear-gradient(to right, #82CFD0 0%, #82CFD0 ' + slider.value + '%, #fff ' + slider.value + '%, white 100%)';
   
 }
     
-    function playPauseTrack() { 
-        // Switch between playing and pausing 
-        // depending on the current state 
-         if (!isPlaying){
-            playTrack(); 
+function playPauseTrack() { 
+   // Switch between playing and pausing 
+  // depending on the current state 
+  if (!isPlaying){
+    playTrack(); 
             
-         }else{
-            pauseTrack(); 
-         };
+  }else{
+    pauseTrack(); 
+  };
         
-         //isPlaying= !isPlaying;
-         console.log(isPlaying);
-      } 
+  //isPlaying= !isPlaying;
+  console.log(isPlaying);
+} 
 
-      function playTrack() { 
-        // Play the loaded track 
-        //curr_track.play(); 
-        curr_track.play();
-       isPlaying = true; 
+function playTrack() { 
+  // Play the loaded track 
+  //curr_track.play(); 
+  curr_track.play();
+  isPlaying = true; 
         
-        // Replace icon with the pause icon 
-        document.getElementById("playPauseButton").innerHTML = '<i class="fas fa-pause-circle"></i>';
-      } 
+  // Replace icon with the pause icon 
+  document.getElementById("playPauseButton").innerHTML = '<i class="fas fa-pause-circle"></i>';
+} 
         
-      function pauseTrack() { 
-        // Pause the loaded track 
-        curr_track.pause(); 
-        isPlaying = false; 
+function pauseTrack() { 
+  // Pause the loaded track 
+   curr_track.pause(); 
+   isPlaying = false; 
         
-        // Replace icon with the play icon 
-        document.getElementById("playPauseButton").innerHTML = '<i class="fas fa-play-circle"></i>';
-      } 
+    // Replace icon with the play icon 
+    document.getElementById("playPauseButton").innerHTML = '<i class="fas fa-play-circle"></i>';
+    } 
 
 // Load the first track in the tracklist 
 loadTrack(trackIndex); 
+
+function changeTheme(themeID){
+  console.log(themeID);
+  if(themeID == "fireButton"){
+    document.getElementById("logo").innerHTML = logoList[1].logoTag;
+    document.getElementById("imgDisplay").innerHTML = trackList[1].imgTag; 
+    playPauseTrack();
+    curr_track.src = trackList[1].path;
+  }else if (themeID =="underwaterButton"){
+    document.getElementById("logo").innerHTML = logoList[2].logoTag;
+    document.getElementById("imgDisplay").innerHTML = trackList[2].imgTag; 
+  }else if (themeID =="sunriseButton"){
+    document.getElementById("logo").innerHTML = logoList[3].logoTag;
+    document.getElementById("imgDisplay").innerHTML = trackList[3].imgTag; 
+  }else{
+    document.getElementById("logo").innerHTML = logoList[0].logoTag;
+    document.getElementById("imgDisplay").innerHTML = trackList[0].imgTag; 
+  }
+}

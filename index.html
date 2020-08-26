@@ -11,7 +11,7 @@
 <body id="grad">
     <div class="mainContent">
         <header>
-            <div class="logoDisplay">
+            <div id="logo" class="logoDisplay">
                 <img src="images\Logo\RainLogo.png" alt="Ambience">
             </div>
         </header>
@@ -37,6 +37,7 @@
                         <i class="fas fa-step-forward"></i>
                     </button> 
                 </div>
+                <!--TO-DO change to volume slider?-->
                 <div class="timeSlider"> 
                     <span class="current-time">00:00</span> 
                     <input type="range" min="0" max="100"
@@ -50,14 +51,17 @@
                 </div>
 
                 <div id="themePicker">
-                    <button type="button" id="fireButton" class="themeButton" onclick="changeTheme();">
+                    <button type="button" id="fireButton" class="themeButton" onclick="changeTheme(this.id);">
                         <img src="images\campfire-afternoon-sunlight.jpg" alt="campfire">
                     </button>
-                    <button type="button" id="underwaterButton" class="themeButton" onclick="changeTheme();">
+                    <button type="button" id="underwaterButton" class="themeButton" onclick="changeTheme(this.id);">
                         <img src="images\underwater-roblundeen.jpg" alt="coral reef">
                     </button>
-                    <button type="button" id="sunriseButton" class="themeButton" onclick="changeTheme();">
+                    <button type="button" id="sunriseButton" class="themeButton" onclick="changeTheme(this.id);">
                         <img src="images\morning-bibliothekarin.jpg" alt="morning sunrise">
+                    </button>
+                    <button type="button" id="rainButton" class="themeButton" onclick="changeTheme(this.id);">
+                        <img src="images\rainonwindow2-Alisonabra.jpg" alt="rain on a window">
                     </button>
                 </div>
             </div>
