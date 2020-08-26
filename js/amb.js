@@ -41,12 +41,12 @@ let trackList = [
     { 
       name: "Water", 
       imgTag: '<img src="images/underwater-roblundeen.jpg" alt="coral reef">', 
-      path: "Shipping_Lanes.mp3",
+      path: "sounds/zapsplat_nature_ocean_waves_gentle_lap_against_rocks_dist_surf_35568.mp3",
     },
     { 
       name: "Sunrise", 
       imgTag: '<img src="images/morning-bibliothekarin.jpg" alt="morning sunrise">', 
-      path: "Shipping_Lanes.mp3",
+      path: "sounds/gain_walkers_Countryside_Spring_Morning_Birds_Insects_Bumblebee.mp3",
       },
 ];
 
