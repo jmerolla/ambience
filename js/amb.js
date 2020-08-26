@@ -134,6 +134,7 @@ loadTrack(trackIndex);
 function changeTheme(themeID){
   console.log(themeID);
   var logoId=0;
+  document.getElementById("bgColor").removeAttribute('class');
   if(themeID == "fireButton"){
     logoId =1;
     
@@ -143,11 +144,16 @@ function changeTheme(themeID){
     logoId=3; 
   }else{
     logoId=0;
+   
+    document.getElementById("bgColor").classList.add("rainGrad");
+
   }
   document.getElementById("logo").innerHTML = logoList[logoId].logoTag;
   document.getElementById("imgDisplay").innerHTML = trackList[logoId].imgTag; 
-  document.getElementById('grad').style.background = logoList[logoId].bgStyle;
+  document.getElementById("bgColor").classList.add("bgAnimation");
   pauseTrack();
   curr_track.src = trackList[logoId].path;
   playTrack();
+
+ 
 }

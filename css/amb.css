@@ -24,11 +24,23 @@ body {
     
 }
 
-#grad {
+.waterGrad {
     height:500%;
     background: linear-gradient(0deg, #7400bb, #6930c3, #5e60ce, #5390d9, #4ea8de, #48bfe3, #56cfe1, #64dfdf, #4acfbc, #00a475);
     background-size: 2000% 2000%;
 
+  
+}
+
+.rainGrad {
+    height:500%;
+    background: linear-gradient(0deg, #797D62, #9B9B7A, #D9AE94, #F1DCA7, #FFCB69, #D08C60, #997B66, #585123, #723D46, #472D30);
+    background-size: 2000% 2000%;
+
+  
+}
+
+.bgAnimation{
     -webkit-animation: BGAnimation 10s ease infinite; 
     -moz-animation: BGAnimation 41s ease infinite;
     animation: BGAnimation 41s ease infinite;
