@@ -129,19 +129,21 @@ loadTrack(trackIndex);
 
 function changeTheme(themeID){
   console.log(themeID);
+  var logoId=0;
   if(themeID == "fireButton"){
-    document.getElementById("logo").innerHTML = logoList[1].logoTag;
-    document.getElementById("imgDisplay").innerHTML = trackList[1].imgTag; 
-    playPauseTrack();
-    curr_track.src = trackList[1].path;
+    logoId =1;
+    
   }else if (themeID =="underwaterButton"){
-    document.getElementById("logo").innerHTML = logoList[2].logoTag;
-    document.getElementById("imgDisplay").innerHTML = trackList[2].imgTag; 
+    logoId=2;
   }else if (themeID =="sunriseButton"){
-    document.getElementById("logo").innerHTML = logoList[3].logoTag;
-    document.getElementById("imgDisplay").innerHTML = trackList[3].imgTag; 
+    logoId=3; 
   }else{
-    document.getElementById("logo").innerHTML = logoList[0].logoTag;
-    document.getElementById("imgDisplay").innerHTML = trackList[0].imgTag; 
+    logoId=0;
   }
+  document.getElementById("logo").innerHTML = logoList[logoId].logoTag;
+  document.getElementById("imgDisplay").innerHTML = trackList[logoId].imgTag; 
+  
+  pauseTrack();
+  curr_track.src = trackList[logoId].path;
+  playTrack();
 }
